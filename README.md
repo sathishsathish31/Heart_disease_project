@@ -1,159 +1,143 @@
-❤️ Heart Disease Prediction using Django & Machine Learning
+❤️ Heart Disease Prediction Web Application
 
-This project is a web-based application that predicts the likelihood of heart disease based on medical input data. It combines Machine Learning (KNN Model) with Django framework to provide an interactive and user-friendly prediction system.
-
-
----
-
-🚀 Features
-
-🔹 Machine Learning Integration
-
-Built with K-Nearest Neighbors (KNN) Algorithm.
-
-Uses 8 medical input features (such as age, cholesterol, blood pressure, etc.).
-
-Provides accurate predictions whether a person is at risk of Heart Disease.
-
-
-🔹 Django Web Application
-
-User-friendly interface built with HTML, CSS, and animations for smooth experience.
-
-Dynamic prediction form to input patient details.
-
-Result page with styled animations to display prediction outcome clearly.
-
-
-🔹 Static & Informative Pages
-
-Home Page – Overview of the project.
-
-About Page – Explains the project, ML model, and use cases.
-
-Result Page – Displays prediction results with animations.
-
-
-🔹 Mobile Friendly
-
-The app can run on mobile devices (via local IP address).
-
-Responsive design with CSS styles for better accessibility.
-
-
-🔹 GitHub Integration
-
-Structured project files for easy deployment.
-
-Clean and reusable code.
-
+🚀 A machine learning–powered web application that predicts the likelihood of heart disease based on medical attributes.
+This project is built using Logistic Regression for prediction and Django for deployment, with a modern HTML/CSS interface for a smooth user experience.
 
 
 ---
 
-🛠️ Tech Stack
+🔍 Overview
 
-Frontend: HTML, CSS, JavaScript (with animations)
+Cardiovascular diseases are a leading cause of death worldwide.
+This project aims to assist in early prediction of heart disease by analyzing multiple clinical parameters.
+Users can input their health details, and the system predicts whether they are at risk of heart disease.
 
-Backend: Django (Python)
 
-Machine Learning: Scikit-learn (KNN Classifier)
+---
 
-Database: SQLite (default Django database)
+⚙️ Features
 
-Version Control: Git & GitHub
+✅ User-Friendly Web Interface – Modern and responsive design built with HTML, CSS, and Django.
+✅ Machine Learning Model – Logistic Regression trained on heart disease dataset.
+✅ Real-Time Prediction – Instantly predicts the probability of having heart disease.
+✅ Interactive Forms – Users enter medical attributes like age, BP, cholesterol, etc.
+✅ Mobile-Friendly Access – Can be tested on both PC and mobile browser.
+✅ Explainable Predictions – Provides insights based on key health parameters.
+
+
+---
+
+🧪 Input Features (User Parameters)
+
+The following attributes are required from the user:
+
+Age – Patient’s age in years
+
+Sex – 1 = Male, 0 = Female
+
+Chest Pain Type (cp) – Value from 0–3
+
+Resting Blood Pressure (trestbps) – Measured in mmHg
+
+Cholesterol (chol) – Serum cholesterol in mg/dl
+
+Fasting Blood Sugar (fbs) – 1 if >120 mg/dl, else 0
+
+Resting ECG (restecg) – Value from 0–2
+
+Max Heart Rate (thalach) – Achieved maximum heart rate
+
+Exercise Induced Angina (exang) – 1 = Yes, 0 = No
+
+ST Depression (oldpeak) – Depression induced by exercise
+
+Slope – Value from 0–2
+
+Number of Major Vessels (ca) – Value from 0–3
+
+Thalassemia (thal) – Value 3, 6, or 7
 
 
 
 ---
 
-📂 Project Structure
+📊 Model Used
 
-heart_prediction/
-│── manage.py
-│── db.sqlite3
-│── requirements.txt
-│── README.md
-│
-├── heart_app/                  # Django App
-│   ├── templates/              # HTML Files (home, about, result)
-│   ├── static/                 # CSS, JS, Images
-│   ├── views.py                # Handles logic & ML model
-│   ├── urls.py                 # Routes
-│   └── models.py               # Database models
-│
-├── ml_model/                   # ML files
-│   ├── knn_model.pkl           # Trained KNN model
-│   └── preprocessing.py        # Data preparation
+Logistic Regression – A classification algorithm widely used for medical predictions.
+
+Trained on a standard Heart Disease Dataset (UCI Repository).
+
+Evaluated using accuracy and classification metrics.
+
 
 
 ---
 
-⚙️ How to Run
+🖥️ Tech Stack
 
-1. Clone the repository
+Frontend: HTML5, CSS3 (styled with glowing effects for better UI)
 
+Backend: Django (Python framework)
 
+Machine Learning: Scikit-learn (Logistic Regression)
 
-git clone https://github.com/sathishsathish31/heart_prediction.git
-cd heart_prediction
-
-2. Create and activate virtual environment
-
+Deployment: Localhost / GitHub integration
 
 
-python -m venv venv
-venv\Scripts\activate   # On Windows
-source venv/bin/activate  # On Mac/Linux
 
-3. Install dependencies
+---
 
+🚀 How to Run
 
+1️⃣ Clone the repository:
+
+git clone https://github.com/your-username/heart-disease-prediction.git
+cd heart-disease-prediction
+
+2️⃣ Install dependencies:
 
 pip install -r requirements.txt
 
-4. Run the server
-
-
+3️⃣ Run Django server:
 
 python manage.py runserver
 
-5. Open in browser
-
-
+4️⃣ Access the app in your browser:
 
 http://127.0.0.1:8000/
 
 
 ---
 
-📊 Input Features Explanation
+📷 Screenshots
 
-Feature	Description
-
-Age	Age of the person
-Sex	Gender (Male/Female)
-Chest Pain Type	Type of chest pain (4 categories)
-Resting BP	Resting blood pressure
-Cholesterol	Serum cholesterol in mg/dl
-Fasting Blood Sugar	>120 mg/dl (1 = true; 0 = false)
-Resting ECG	Electrocardiographic results
-Max HR	Maximum heart rate achieved
+🔹 Prediction Page
 
 
 
 ---
 
-🎯 Future Enhancements
+🌟 Future Enhancements
 
-Add more ML models (Random Forest, Logistic Regression).
+Add more machine learning models (Random Forest, XGBoost).
 
-Deploy the project on Heroku / Render / PythonAnywhere for online access.
+Deploy on Heroku/Render/AWS for public access.
 
-Add user authentication (Login/Register) to save predictions.
+Enhance UI with Bootstrap/Tailwind CSS.
 
-Visualize predictions with charts (Power BI or Chart.js).
+Add visualizations for patient health reports.
 
+
+
+---
+
+🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+
+ZZ
+🔥 With this project, I explored Machine Learning (Logistic Regression), Web Development (Django), and Deployment, building a complete end-to-end ML application.
 
 
 ---
