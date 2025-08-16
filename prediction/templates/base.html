@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>🔥 Heart Disease Prediction </h1>
+        <nav>
+            <a href="{% url 'predict' %}">Prediction</a> |
+            <a href="{% url 'logout' %}">Logout</a>|
+            <a href="{% url 'about' %}">About</a>|
+            <a href="{% url 'login' %}">Home</a>
+        </nav>
+    </header>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

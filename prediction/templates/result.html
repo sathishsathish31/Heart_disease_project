@@ -1,0 +1,18 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block content %}
+<div class="form-container" style="background-image:url('{% static 'images/bg3.jpg' %}');">
+  <div class="animated-form">
+    <h2>❤️ Heart Disease Prediction Result</h2>
+
+    <div class="result animated-result">
+        <h3>{{ message }}</h3>
+        <p>Raw Model Output: {{ prediction }}</p>
+    </div>
+
+    <a href="{% url 'predict' %}">
+      <button style="margin-top:20px;">🔄 Predict Again</button>
+    </a>
+  </div>
+</div>
+{% endblock %}

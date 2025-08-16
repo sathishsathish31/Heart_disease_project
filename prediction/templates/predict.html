@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="form-container" style="background-image:url('{% static 'images/bg3.jpg' %}');">
+  <form method="POST" class="animated-form" autocomplete="off">
+    {% csrf_token %}
+    <h2>🩺 Heart Disease Prediction ❤️</h2>
+
+    <!-- Row 1 -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;">
+      <div>
+        <label>Age</label>
+        <input type="number" step="1" name="age" placeholder="e.g., 54" required>
+      </div>
+      <div>
+        <label>Sex</label>
+        <input type="number" step="1" name="sex" placeholder="1 = Male, 0 = Female" required>
+      </div>
+      <div>
+        <label>Chest Pain Type (cp)</label>
+        <input type="number" step="1" name="cp" placeholder="0–3" required>
+      </div>
+
+      <!-- Row 2 -->
+      <div>
+        <label>Resting BP (trestbps)</label>
+        <input type="number" step="1" name="trestbps" placeholder="e.g., 130" required>
+      </div>
+      <div>
+        <label>Cholesterol (chol)</label>
+        <input type="number" step="1" name="chol" placeholder="e.g., 246" required>
+      </div>
+      <div>
+        <label>Fasting Blood Sugar (fbs)</label>
+        <input type="number" step="1" name="fbs" placeholder="1 = True, 0 = False" required>
+      </div>
+
+      <!-- Row 3 -->
+      <div>
+        <label>Resting ECG (restecg)</label>
+        <input type="number" step="1" name="restecg" placeholder="0–2" required>
+      </div>
+      <div>
+        <label>Max Heart Rate (thalach)</label>
+        <input type="number" step="1" name="thalach" placeholder="e.g., 150" required>
+      </div>
+      <div>
+        <label>Exercise Angina (exang)</label>
+        <input type="number" step="1" name="exang" placeholder="1 = Yes, 0 = No" required>
+      </div>
+
+      <!-- Row 4 -->
+      <div>
+        <label>ST Depression (oldpeak)</label>
+        <input type="number" step="any" name="oldpeak" placeholder="e.g., 1.4" required>
+      </div>
+      <div>
+        <label>Slope</label>
+        <input type="number" step="1" name="slope" placeholder="0–2" required>
+      </div>
+      <div>
+        <label>CA (Major Vessels)</label>
+        <input type="number" step="1" name="ca" placeholder="0–3" required>
+      </div>
+
+      <!-- Row 5 -->
+      <div>
+        <label>Thal</label>
+        <input type="number" step="1" name="thal" placeholder="e.g., 3/6/7" required>
+      </div>
+    </div>
+
+    <button type="submit" style="margin-top:16px;">Predict</button>
+
+    {% if prediction is not None %}
+      <div class="result animated-result">
+        <h3>Prediction Result: {{ prediction }}</h3>
+      </div>
+    {% endif %}
+  </form>
+</div>
+
+<!-- Tiny UX touch: scroll to result after submit -->
+<script>
+  (function(){
+    const result = document.querySelector('.result');
+    if (result) {
+      result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  })();
+</script>
+{% endblock %}

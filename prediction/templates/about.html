@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - Heart Disease Prediction</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #a6c0fe, #fc67a5ff);
+
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    header {
+        box-shadow: 0 0 20px #ff9800;
+        border-color: #ff9800;
+      padding: 20px;
+      background: rgba(2, 0, 0, 0.97);
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      animation: slideDown 1s ease-in-out;
+    }
+    section {
+      padding: 50px 10%;
+      animation: fadeIn 2s ease-in;
+    }
+    h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      animation: glow 2s infinite alternate;
+      color:black;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .card {
+      background: rgba(8, 1, 1, 0.94);
+      color:white;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+     
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 20px #ff9800;
+        border-color: #ff9800;
+    }
+    
+    .card:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: rgba(0,0,0,0.4);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideDown {
+      from {transform: translateY(-100px);}
+      to {transform: translateY(0);}
+    }
+    @keyframes glow {
+      from {text-shadow: 0 0 10px #fff;}
+      to {text-shadow: 0 0 20px #ff9a9e;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Heart Disease Prediction System
+  </header>
+
+  <section>
+    <h1>About This Project</h1>
+    <div class="card">
+      <p>
+        This web application predicts the likelihood of heart disease using advanced
+        machine learning models such as <b>Logistic Regression</b> and <b>Linear Regression</b>.
+      </p>
+      <p>
+        Users can register, login, and input their health data including
+        <i>age, sex, chest pain type, cholesterol level, blood pressure, ECG results</i> and more.
+      </p>
+      <p>
+        The system then provides predictions and helps in understanding potential risks.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Technologies Used</h2>
+      <p>
+        🔹 Python & Django <br>
+        🔹 Machine Learning (Logistic Regression & Linear Regression) <br>
+        🔹 HTML, CSS & JavaScript (Animations) <br>
+        🔹 Bootstrap for UI Design
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Why This Project?</h2>
+      <p>
+        Heart disease is one of the leading causes of death globally.
+        Early prediction and awareness can save lives. This project aims
+        to combine <b>data science</b> and <b>healthcare</b> to make a difference.
+      </p>
+    </div>
+  </section>
+  <center> <a href="{% url 'predict' %}">Go To Predict Page</a></center>
+
+  <footer>
+    <p>© 2025 Heart Disease Prediction | Built with ❤️ using Django & ML</p>
+  </footer>
+</body>
+</html>
